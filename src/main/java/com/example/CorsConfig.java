@@ -12,5 +12,8 @@ public class CorsConfig implements WebMvcConfigurer {
         registry.addMapping("/chat") // Allow CORS for the '/chat' endpoint
                 .allowedOrigins("http://localhost:4200") // Allow requests from this origin
                 .allowedMethods("GET", "POST"); // Allow only GET and POST methods
+        registry.addMapping("/events")
+                .allowedOrigins("http://localhost:4200")
+                .allowedMethods("GET");
     }
 }
